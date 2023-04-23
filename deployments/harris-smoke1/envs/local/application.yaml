@@ -11,7 +11,7 @@ spec:
   - name: harris-smoke1-harrissmoke1-api
     properties:
       addRevisionLabel: false
-      cpu: "0.01"
+      cpu: "0.5"
       exposeType: ClusterIP
       image: docker-pull.infinity.reslv.one/nginx
       imagePullPolicy: IfNotPresent
@@ -24,10 +24,12 @@ spec:
   - name: harris-smoke1-harsmoke2-api
     properties:
       addRevisionLabel: false
-      cpu: "0.01"
+      cpu: "0.5"
       exposeType: ClusterIP
       image: docker-pull.infinity.reslv.one/nginx
       imagePullPolicy: IfNotPresent
+      imagePullSecrets:
+      - docker-pull.infinity.reslv.one
       memory: 1Mi
       ports:
       - expose: true
