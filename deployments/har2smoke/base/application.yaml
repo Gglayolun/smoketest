@@ -1,0 +1,26 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  annotations:
+    application.deploy.reform/tags: nc-1
+  creationTimestamp: null
+  name: har2smoke
+  namespace: vela-system
+spec:
+  components:
+  - name: har2smoke-harrissmoke2-api
+    properties:
+      addRevisionLabel: false
+      cpu: "0.5"
+      exposeType: ClusterIP
+      image: docker-pull.infinity.reslv.one/nginx
+      imagePullPolicy: IfNotPresent
+      imagePullSecrets:
+      - docker-pull.infinity.reslv.one
+      memory: 21Mi
+      ports:
+      - expose: true
+        port: 80
+        protocol: TCP
+    type: webservice
+status: {}
