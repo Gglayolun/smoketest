@@ -1,15 +1,15 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 commonAnnotations:
   application.deploy.reform/cluster: local
-  application.deploy.reform/commitHash: b9e0251c25cc1bc9372307e4bafc7a5724e04068
-  application.deploy.reform/deploymentNo: har2smoke-local-approval_DP4
+  application.deploy.reform/commitHash: 3bcfded708de5974a90988fb011db790bd256fdd
+  application.deploy.reform/deploymentNo: har2smoke-local-approval_DP36
   application.deploy.reform/environment: local-approval
   application.deploy.reform/name: har2smoke
   application.deploy.reform/repository: https://github.com/Gglayolun/smoketest.git
   application.deploy.reform/repositoryPath: har2smoke
-  application.deploy.reform/revision: 2023.04.4-RB2023.04.3
+  application.deploy.reform/revision: 2023.04.36-RB2023.04.3
   deploy.reform/domain: ""
-  deploy.reform/version: f0b71db77f6a0f746bcd4186d01868e6a404cbc0
+  deploy.reform/version: 8bb007025bbf81bb8a6773ddf5e940e16c00bf22
 kind: Kustomization
 namespace: vela-app
 patchesStrategicMerge:
